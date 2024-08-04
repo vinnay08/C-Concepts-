@@ -2,31 +2,42 @@
 
 #include<stdio.h>
 
-reverse(){   
-	int i,lenth=-1;
-	char str[256];
+// Function to reverse the input string
+reverse() {   
+    int i, length = -1;
+    char str[256];
+
+    // Prompt the user to enter a string
     printf("Enter a string: ");
-    scanf("%s",&str);
     
-    for(i=0;str[i]!='\0';i++)
-    {
-    	lenth++; 
-	}
-	int start=0,temp;
-	for(i=0;i<256;i++)
-	{
-	if(start<=lenth)
-	{
-		temp=str[start];
-		str[start]=str[lenth];  
-		str[lenth]=temp;
-		start++;
-		lenth--;
-	}
+    // Read the input string from the user
+    scanf("%s", str);
+    
+    // Calculate the length of the string
+    for(i = 0; str[i] != '\0'; i++) {
+        length++; 
     }
-	
-	printf("Reversed String: %s",str);  
+
+    int start = 0, temp;
+
+    // Reverse the string in place
+    for(i = 0; i < 256; i++) {
+        // Swap characters until the middle of the string is reached
+        if(start <= length) {
+            temp = str[start];
+            str[start] = str[length];  
+            str[length] = temp;
+            start++;
+            length--;
+        }
+    }
+    
+    // Print the reversed string
+    printf("Reversed String: %s", str);  
 }
-main(){
-	reverse();
+
+main() {
+    // Call the reverse function
+    reverse();
 }
+

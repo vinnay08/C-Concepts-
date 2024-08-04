@@ -4,11 +4,21 @@
 //	 c. Your Age 
 //	 d. Your Address 
 
+#include <stdio.h> // Include the standard input-output header file
 
-#include<stdio.h>
-main(){
-	printf("Vinay Jadav");
-	printf("\n02-02-2004");
-	printf("\nAge is 20");
-	printf("\nCTM");
+// Main function, the entry point of the program
+main() {
+    // Print the name "Vinay Jadav"
+    printf("Vinay Jadav");
+    
+    // Print the date of birth
+    printf("\n02-02-2004");
+    
+    // Print the age
+    printf("\nAge is 20");
+    
+    // Print the abbreviation "CTM"
+    printf("\nCTM");
+
 }
+

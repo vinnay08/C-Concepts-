@@ -2,34 +2,36 @@
 
 #include <stdio.h>
 
-int main() {
+main() {
     int num, originalNum, reversedNum = 0, remainder;
-    int count = 0;
+    int count = 0; // Counter to track the number of inputs processed
 
-    
+    // Loop to handle 3 numbers
     while (count < 3) {
-        printf("Enter number: ", count + 1);
-        scanf("%d", &num);
+        // Prompt user for input
+        printf("Enter number: ");
+        scanf("%d", &num); // Read user input
         
-        
+        // Store the original number for comparison
         originalNum = num;
-        reversedNum = 0;
+        reversedNum = 0; // Reset reversedNum for each new input
         
+        // Reverse the digits of the number
         while (num != 0) {
-            remainder = num % 10;
-            reversedNum = reversedNum * 10 + remainder;
-            num /= 10;
+            remainder = num % 10; // Get the last digit
+            reversedNum = reversedNum * 10 + remainder; // Build the reversed number
+            num /= 10; // Remove the last digit from num
         }
 
+        // Check if the original number and the reversed number are the same
         if (originalNum == reversedNum) {
-            printf("%d is a palindrome.\n", originalNum);
+            printf("%d is a palindrome.\n", originalNum); // Output if number is a palindrome
         } else {
-            printf("%d is not a palindrome.\n", originalNum);
+            printf("%d is not a palindrome.\n", originalNum); // Output if number is not a palindrome
         }
 
-        count++; 
+        count++; // Increment the counter
     }
-
-    return 0;
 }
+
 
